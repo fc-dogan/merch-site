@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemList from './ItemList';
-
+import NewItemForm from './NewItemForm';
 
 class ItemControl extends React.Component {
   constructor(props){
@@ -14,6 +14,7 @@ class ItemControl extends React.Component {
       <React.Fragment>
         <h1>Item control</h1>
         <ItemList />
+        <NewItemForm />
       </React.Fragment>
     )
   }
