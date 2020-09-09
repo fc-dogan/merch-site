@@ -11,7 +11,7 @@ _a website for selling merchandise_
 
 ### Component Diagram
 
-<img src="src/img/diagram.jpg" width="550px" />
+<img src="img/diagram.jpg" width="550px" />
 
 ## Specification user stories:
 * A user should be able to create, read, update, and delete items in the store.
