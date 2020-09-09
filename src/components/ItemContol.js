@@ -1,4 +1,6 @@
 import React from 'react';
+import ItemList from './ItemList';
+
 
 class ItemControl extends React.Component {
   constructor(props){
@@ -9,8 +11,10 @@ class ItemControl extends React.Component {
 
   render(){
     return (
-      <h1>Item control</h1>
-      // <Item />
+      <React.Fragment>
+        <h1>Item control</h1>
+        <ItemList />
+      </React.Fragment>
     )
   }
 }
