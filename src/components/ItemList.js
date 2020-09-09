@@ -6,12 +6,13 @@ function ItemList(props){
   return (
     <React.Fragment>
       <h4>Item List</h4>
-  
-      {/* {props.itemList.map( item => 
+      {/* <p>{props.itemList}</p>; */}
+      {/* {props.itemList.map((item, index) => 
         <Item 
           name={item.name}
           quantity={item.quantity}
-          description={item.description} />
+          description={item.description}
+          key={index} />
       )} */}
     </React.Fragment>
   )
@@ -22,4 +23,5 @@ ItemList.propTypes = {
 };
 
 export default ItemList ;
+
 
