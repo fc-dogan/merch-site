@@ -4,14 +4,14 @@
 
 ## Description
 
-_Description..._
+_a website for selling merchandise_
 
-_View the live site at:_ 
+<!-- _View the live site at:_  -->
 
-<!-- ![UI Design](https://i.imgur.com/cza07rG.png) -->
+
 ### Component Diagram
 
-
+![component diagram](img/merch site.jpg)
 
 ## Specification user stories:
 * A user should be able to create, read, update, and delete items in the store.
