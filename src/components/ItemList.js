@@ -1,8 +1,12 @@
 import React from 'react';
+import Item from './Item';
 
 function ItemList(){
   return (
-    <h1>Item list</h1>
+    <React.Fragment>
+      <h1>Item list</h1>
+      <Item />
+    </React.Fragment>
   )
 }
 
