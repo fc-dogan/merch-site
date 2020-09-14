@@ -5,6 +5,15 @@ const itemData = {
   quantity: 1,
   description: "Sleek, richly hued marquise-shaped rubies alternate with brilliant bezel-set round diamonds on this delicate anniversary ring, accentuated by the blush of 14k rose gold"
 };
+const currentState = {
+  1: {name: "Marquise Ruby and Diamond Ring",
+  quantity: 1,
+  description: "Sleek, richly hued marquise-shaped rubies alternate with brilliant bezel-set round diamonds on this delicate anniversary ring, accentuated by the blush of 14k rose gold"
+  },
+  2: {name: "Star Sapphire Ring",
+  quantity: 2,
+  description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats."}
+};
 
 describe('itemListReducer', () => {
   test('Should return default state if there is no action type passed into reducer', () => {

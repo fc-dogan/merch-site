@@ -1,6 +1,8 @@
 import React from 'react';
 import ItemList from './ItemList';
 import NewItemForm from './NewItemForm';
+import { connect } from 'react-redux';
+import PropTypes from "prop-types";
 
 class ItemControl extends React.Component {
 
@@ -8,11 +10,6 @@ class ItemControl extends React.Component {
     super(props);
     this.state = {
       formVisibleOnPage: false,
-      allItemList: [
-        {name: "Star Sapphire Ring",
-          quantity: 2,
-          description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats."},
-      ]
     };
   }
 
@@ -48,5 +45,11 @@ class ItemControl extends React.Component {
     )
   }
 }
+
+ItemControl.propTypes = {
+  allItemList: PropTypes.object
+};
+
+ItemControl = connect()(ItemControl);
 
 export default ItemControl;
