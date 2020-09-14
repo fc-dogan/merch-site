@@ -8,12 +8,13 @@ function ItemList(props){
     <React.Fragment>
       <h4>Item List</h4>
       <hr/>
-      {Object.values(props.itemList).map((item, index) => 
+      {Object.values(props.itemList).map((item) => 
         <Item 
           name={item.name}
           quantity={item.quantity}
           description={item.description}
-          key={index} />
+          id= {item.id}
+          key= {item.id} />
       )}
     </React.Fragment>
   )
