@@ -6,15 +6,17 @@ const itemData = {
   description: "Sleek, richly hued marquise-shaped rubies alternate with brilliant bezel-set round diamonds on this delicate anniversary ring, accentuated by the blush of 14k rose gold",
   id: 1
 };
+
 const currentState = {
   1: {name: "Marquise Ruby and Diamond Ring",
-  quantity: 1,
-  description: "Sleek, richly hued marquise-shaped rubies alternate with brilliant bezel-set round diamonds on this delicate anniversary ring, accentuated by the blush of 14k rose gold"
-  },
+    quantity: 1,
+    description: "Sleek, richly hued marquise-shaped rubies alternate with brilliant bezel-set round diamonds on this delicate anniversary ring, accentuated by the blush of 14k rose gold",
+    id: 1
+    },
   2: {name: "Star Sapphire Ring",
-  quantity: 2,
-  description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats."},
-  id:2
+    quantity: 2,
+    description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats.",
+    id:2}
 };
 
 describe('itemListReducer', () => {
@@ -45,12 +47,12 @@ describe('itemListReducer', () => {
     action = {
       type: 'DELETE_ITEM',
       id: 1
-    }
-    expect(itemListReducer( {}, action)).toEqual({
+    };
+    expect(itemListReducer(currentState, action)).toEqual({
       2: {name: "Star Sapphire Ring",
       quantity: 2,
-      description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats."},
-      id: 2
+      description: "sugarloaf cabochon, pale mauve star Sapphire, 17.90 carats.",
+      id: 2}
     })
   })
 });
