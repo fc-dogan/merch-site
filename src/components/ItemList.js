@@ -10,6 +10,7 @@ function ItemList(props){
       <hr/>
       {Object.values(props.itemList).map((item) => 
         <Item 
+          onClickDelete= {props.onClickingDelete}
           name={item.name}
           quantity={item.quantity}
           description={item.description}
@@ -21,7 +22,8 @@ function ItemList(props){
 }
 
 ItemList.propTypes = {
-  itemList: PropTypes.array
+  itemList: PropTypes.array,
+  onClickingDelete: PropTypes.func
 };
 
 export default ItemList ;

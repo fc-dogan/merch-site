@@ -33,6 +33,16 @@ class ItemControl extends React.Component {
     this.setState({formVisibleOnPage: false });
   }
 
+  handleDeletingItem = (id) =>{
+    const { dispatch } = this.props;
+    const action = {
+      type: 'DELETE_ITEM',
+      id: id
+    }
+    dispatch(action);
+    
+  }
+
 
   render(){
     let currentlyVisibleState = null;
@@ -41,7 +51,7 @@ class ItemControl extends React.Component {
       currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItem}/>
       buttonText = "Return to Item List";
     } else {
-      currentlyVisibleState = <ItemList itemList={this.props.allItemList} />
+      currentlyVisibleState = <ItemList itemList={this.props.allItemList} onClickingDelete={this.handleDeletingItem} />
       buttonText = "Add a new Item";
     }
     return (
