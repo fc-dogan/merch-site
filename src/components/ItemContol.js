@@ -41,7 +41,7 @@ class ItemControl extends React.Component {
       currentlyVisibleState = <NewItemForm onNewItemCreation={this.handleAddingNewItem}/>
       buttonText = "Return to Item List";
     } else {
-      currentlyVisibleState = <ItemList itemList={this.state.allItemList} />
+      currentlyVisibleState = <ItemList itemList={this.props.allItemList} />
       buttonText = "Add a new Item";
     }
     return (
