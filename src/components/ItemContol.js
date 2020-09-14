@@ -58,6 +58,12 @@ ItemControl.propTypes = {
   allItemList: PropTypes.object
 };
 
-ItemControl = connect()(ItemControl);
+const mapStateToProps = state => {
+  return {
+   allItemList: state
+  }
+}
+
+ItemControl = connect(mapStateToProps)(ItemControl);
 
 export default ItemControl;
