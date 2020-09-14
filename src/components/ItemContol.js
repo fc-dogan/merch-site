@@ -20,9 +20,17 @@ class ItemControl extends React.Component {
   }
 
   handleAddingNewItem = (newItem) =>{
-    const newAllItemList = this.state.allItemList.concat(newItem);
-    this.setState({allItemList: newAllItemList,
-                  formVisibleOnPage: false });
+    const { dispatch } = this.props;
+    const { id, name, quantitiy, description } = newItem;
+    const action = {
+      type: 'ADD_ITEM',
+      id: id,
+      name: name,
+      quantitiy: quantitiy,
+      description: description
+    }
+    dispatch(action);
+    this.setState({formVisibleOnPage: false });
   }
 
 
