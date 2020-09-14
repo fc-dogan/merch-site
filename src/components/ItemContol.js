@@ -42,7 +42,6 @@ class ItemControl extends React.Component {
     return (
       <React.Fragment>
         <hr/>
-        <h1>Item control</h1>
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>

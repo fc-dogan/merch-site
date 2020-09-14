@@ -8,6 +8,7 @@ function ItemList(props){
     <React.Fragment>
       <h4>Item List</h4>
       {/* <p>{props.itemList}</p>; */}
+      <hr/>
       {props.itemList.map((item, index) => 
         <Item 
           name={item.name}
